@@ -20,12 +20,12 @@ after_success:
   - docker build -t trebu2020/multi-client ./client
   - docker build -t trebu2020/multi-server ./server
   - docker build -t trebu2020/multi-worker ./worker
-  - docker build -t trebu2020/mutli-nginx ./nginx
+  - docker build -t trebu2020/multi-nginx ./nginx
 
 # Log into Docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 # Take images and push them to the Docker Hub
   - docker push trebu2020/multi-client
-  - docker push trebu2020/mutli-server
+  - docker push trebu2020/multi-server
   - docker push trebu2020/multi-worker
   - docker push trebu2020/multi-nginx
