@@ -25,7 +25,7 @@ after_success:
 # Log into Docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 # Take images and push them to the Docker Hub
-  - docker push trebu2002/multi-client
-  - docker push trebu2002/mutli-server
-  - docker push trebu2002/multi-worker
-  - docker push trebu2002/multi-nginx
+  - docker push trebu2020/multi-client
+  - docker push trebu2020/mutli-server
+  - docker push trebu2020/multi-worker
+  - docker push trebu2020/multi-nginx
