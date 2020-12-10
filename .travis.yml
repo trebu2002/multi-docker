@@ -23,7 +23,7 @@ after_success:
   - docker build -t trebu2002/mutli-nginx ./nginx
 
 # Log into Docker CLI
-  - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 # Take images and push them to the Docker Hub
   - docker push trebu2002/multi-client
   - docker push trebu2002/mutli-server
