@@ -29,3 +29,15 @@ after_success:
   - docker push trebu2020/multi-server
   - docker push trebu2020/multi-worker
   - docker push trebu2020/multi-nginx
+
+deploy:
+  provider: elasticbeanstalk
+  region: 'us-west-2'
+  app: 'multi-docker'
+  env: 'MultiDocker-env'
+  bucket_name: 'elasticbeanstalk-us-west-2-792648339719'
+  bucket_path: 'docker-multi'
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
