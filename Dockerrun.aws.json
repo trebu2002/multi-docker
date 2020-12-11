@@ -11,7 +11,7 @@
     {
       "name": "server",
       "image": "trebu2020/multi-server",
-      "hostname": "api ",
+      "hostname": "api",
       "essential": false,
       "memory": 128
     },
